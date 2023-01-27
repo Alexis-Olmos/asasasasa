@@ -52,10 +52,7 @@
     font-size: 36px;
     margin-top: 20px;
     margin-left: 10px;
-    background-image: linear-gradient(rgb(34, 231, 182),rgb(2, 175, 132) , #00d9ff, #00a0bd );
-    background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    color: #00d39e;
 }
 
 nav ul{
@@ -84,7 +81,7 @@ ul li a{
 /*pruebaaaaaaaaaaaaaaaaaaaaa*/
 .nav__label{
     font-size: 25px;
-    color: #0dd6ec;
+    color: #00d39e;
     float: right;
     margin-top: 20px;
     margin-right: 20px;
@@ -95,8 +92,6 @@ ul li a{
 .nav__input{
     display: none;
 }
-
-
 
 /*MAIN*/
 .contenedor main{
@@ -183,12 +178,13 @@ main #clinica{
     color: rgba(0, 0, 0, 0.678);
 }
 .clinica__datos button{
-    background-color: rgba(41, 40, 40, 0.13);
+    background-color: rgba(41, 40, 40, 0.212);
     cursor: pointer;
     border: none;
     color: #06a6b8;
     font-weight: bold;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .clinica__datos h2{
@@ -217,12 +213,13 @@ main #clinica{
 }
 
 .clinica__trat button{
-    background-color: rgba(41, 40, 40, 0.13);
+    background-color: rgba(41, 40, 40, 0.212);
     cursor: pointer;
     border: none;
     color: #06a6b8;
     font-weight: bold;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .img{
@@ -354,24 +351,26 @@ main #servicios{
 .parUno button{
     margin-top: 10px;
     cursor: pointer;
-    color: white;
+    color: black;
     font-size: 16px;
     font-weight: bold;
-    background-color: transparent;
+    background-color: #0dd6ec;
+    border-radius: 5px;
     border: none;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+
 }
 
 /* animaciones servicios */
 .carta__primera:hover, .carta__Segunda:hover, .carta__tercera:hover, .carta__Cuarta:hover, .carta__quinta:hover, .carta__sexta:hover, .carta__sexta:hover{
     transition-duration: 1.5s;
     transition-delay: .3s;
-    transform: scale(1.15);
     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
-    border: 2px solid #0dd6ec;
+
 }
 
 .carta__primera button:hover, .carta__Segunda button:hover, .carta__tercera button:hover, .carta__Cuarta button:hover, .carta__quinta button:hover, .carta__sexta button:hover, .carta__sexta button:hover{
-    border-top: 2px solid #0dd6ec;
+    text-decoration: 2px underline #0dd6ec;
 }
 
 /* FOOTER */
@@ -404,7 +403,7 @@ main #servicios{
     color: white;
     display: flex;  
     justify-content: flex-end;
-    margin-right: 20px;
+    margin: 30px 20px 10px 0;
 }
 
 /* animacion cambio de color titulos*/
@@ -811,31 +810,11 @@ main #servicios{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: bottom bottom ;
-    border-top: 1.5px solid #00000044;
+    box-shadow: 1px 1px 5px #000;
 }
 
-/* .mainCont .formulario{
+.mainCont .formulario{
     grid-area: form;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    position: relative;
-    margin-top: 60px;
-    width: 100%;
-    color: rgba(0, 0, 0, 0.678);
-} */
-
-.formulario .form-contacto{
-    color: #0dd6ec;
-    text-align: center;
-} 
-.formulario .form-contacto samp{
-    color: #fff;
-}
-
-.formulario{
     background: rgb(0, 0, 0,.6);
     width: 90%;
     max-width: 650px;
@@ -844,6 +823,14 @@ main #servicios{
     margin-top: 30px;
     padding-bottom: 30px;
     border-radius: 3px;
+}
+
+.formulario .form-contacto{
+    color: #0dd6ec;
+    text-align: center;
+} 
+.formulario .form-contacto samp{
+    color: #fff;
 }
 
 .formulario .form-label{
@@ -1020,39 +1007,43 @@ main #servicios{
 
     .nav__label{
         display: block;
+        padding: 18.5px 10px;
     }
 
     .nav__menu{
-        position:fixed;
-        top: 90px;
+        position:relative;
+        left: -100%;
+        top: 8px;
         bottom: 0;
         background-color: #0dd6ec;
         width: 100%;
-        left: 0;
+        height: 50vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
+        transition: all 1.5s ease-in-out;
     }
 
     .nav__input:checked + .nav__menu{
-        clip-path: circle(100% at center);
+        left: 0;
     }
 
     nav ul li{
         margin: 10px 0;
+        padding: 5px 0;
         line-height: 10px;
     }
     nav ul li a{
         font-size: 18px;
+        font-weight: bold;
 
     }
     .nav__menu li a:hover{
-        border-top: 2px solid rgba(0,0,0,.7);
+        border-top: none;
         font-weight: bold;
         color: rgba(0, 0, 0,.7);
+        text-decoration: 1.5px underline ;
     }
 
     main #servicios{
@@ -1064,7 +1055,7 @@ main #servicios{
         "parDos"
         "parTres";
     }
-    /* footer */
+
     .copyR{
         align-items: center;
         justify-content: center;
@@ -1074,6 +1065,36 @@ main #servicios{
     .contenedor header{
         height: 100px;
     }
+
+    #pag__servicios .primCartas{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    #pag__servicios .segCartas{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+
+    .carta__primeraServ,.carta__segundaServ,.carta__terceraServ,.carta__cuartaServ,
+    .carta__quintaServ,.carta__sextaServ{
+        border: groove #0dd6ec;
+        filter: grayscale(100%);
+        display: flex;
+        width: 80%;
+        height: 40vh;
+        text-align: center;
+        align-items: center;
+        justify-content:center;
+        color: transparent;
+        border-radius:10px;
+        margin: 30px 0;
+}
+
     /* nuestra-clinica */
     .contenedor .main__clin{
         grid-area: main;
@@ -1169,7 +1190,7 @@ main #servicios{
     .carta__Cuarta,.carta__quinta,.carta__sexta{
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 90%;
     }
     .copyR{
         text-align: center;
