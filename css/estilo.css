@@ -916,15 +916,14 @@ main #servicios{
     }
 
     .nav__menu{
-        position:relative;
+        position: absolute;
         border-top: 2px solid #05668d;
         left: -100%;
-        top: 14px;
+        top: 100px;
         bottom: 0;
         background-color: #028090;
         width: 100%;
         height: 50vh;
-        display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
@@ -933,7 +932,10 @@ main #servicios{
 
     .nav__input:checked + .nav__menu{
         left: 0;
+        display: flex;
     }
+
+
 
     nav ul li{
         margin: 10px 0;
