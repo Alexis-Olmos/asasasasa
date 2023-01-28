@@ -40,7 +40,7 @@
 .logo{
     display: flex;
     position: absolute;
-    padding: 20px 40px;
+    padding: 20px;
 }
 
 .logo img{
@@ -52,7 +52,7 @@
     font-size: 30px;
     margin-top: 20px;
     margin-left: 10px;
-    color: #00d39e;
+    color: #05668d;
 }
 
 nav ul{
@@ -63,7 +63,7 @@ nav ul{
 
 nav ul li{
     font-family: 'Space Grotesk', sans-serif;
-    line-height: 130px;
+    line-height: 127px;
     margin: 0 10px;
 }
 
@@ -74,14 +74,14 @@ ul li a{
 }
 
 .nav__item:hover{
-    border-top: 3px solid rgb(34, 231, 182);
+    border-top: 3px solid #00a896;
     font-weight: bold;
-    color: #0dd6ec;
+    color: #05668d;
 }
 
 .nav__label{
     font-size: 25px;
-    color: #00d39e;
+    color: #05668d;
     float: right;
     margin-top: 20px;
     margin-right: 20px;
@@ -116,7 +116,7 @@ main #img-portada {
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
         )
-        ,url(../assets/images/o\ esta.jpg);
+        ,url(../assets/images/esta.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -174,14 +174,14 @@ main #clinica{
     justify-content: center;
     padding: 0 30px;
     margin: 0 20px;
-    border: 2px dotted #0dd6ec ;
+    border: 2px dotted #05668d ;
     color: rgba(0, 0, 0, 0.678);
 }
 .clinica__datos button{
-    background-color: rgba(41, 40, 40, 0.212);
+    background-color: #05668d;
     cursor: pointer;
     border: none;
-    color: #06a6b8;
+    color: #f0f3bd;
     font-weight: bold;
     padding: 10px;
     border-radius: 5px;
@@ -190,7 +190,7 @@ main #clinica{
 .clinica__datos h2{
     text-align: center; 
     align-items: center;
-    border-bottom: 2px groove #0dd6ec;
+    border-bottom: 2px solid #05668d;
     margin-bottom: 15px;
     color: black;
 }
@@ -213,10 +213,10 @@ main #clinica{
 }
 
 .clinica__trat button{
-    background-color: rgba(41, 40, 40, 0.212);
+    background-color: #05668d;
     cursor: pointer;
     border: none;
-    color: #06a6b8;
+    color: #f0f3bd;
     font-weight: bold;
     padding: 10px;
     border-radius: 5px;
@@ -225,8 +225,12 @@ main #clinica{
 .img{
     display: flex;
     justify-content: center;
-    width: 40px;
     margin-top: 20px;
+}
+
+.img img{
+    width: 80px;
+    margin: 20px;
 }
 
 /* **** section3: servicios ******** */
@@ -236,15 +240,15 @@ main #servicios{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
     grid-template-areas: 
-    "parUno parUno parUno"
-    "parUno parUno parUno";
+    "cartas cartas cartas"
+    "cartas cartas cartas";
     padding: 90px 50px;
     background-color: rgba(228, 224, 224, 0.466);
 }
 
-.parUno{
+.cartas{
     width: 100%;
-    grid-area: parUno;
+    grid-area: cartas;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -254,7 +258,7 @@ main #servicios{
 
 .carta__primera,.carta__Segunda,.carta__tercera,
 .carta__Cuarta,.carta__quinta,.carta__sexta{
-    border: groove #0dd6ec;
+    border: solid #00a896;
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -343,18 +347,19 @@ main #servicios{
 }
 
 /* posicion de titulo h3 y boton +info */
-.parUno h3{
+.cartas h3{
     margin-top: 50px;
     color: white;
 }
 
-.parUno button{
+.cartas button{
     margin-top: 10px;
+    padding: 8px ;
     cursor: pointer;
-    color: black;
+    color: #f0f3bd;
     font-size: 16px;
     font-weight: bold;
-    background-color: #0dd6ec;
+    background-color: #05668d;
     border-radius: 5px;
     border: none;
     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
@@ -369,15 +374,11 @@ main #servicios{
 
 }
 
-.carta__primera button:hover, .carta__Segunda button:hover, .carta__tercera button:hover, .carta__Cuarta button:hover, .carta__quinta button:hover, .carta__sexta button:hover, .carta__sexta button:hover{
-    text-decoration: 2px underline #0dd6ec;
-}
-
 /* FOOTER */
 .contenedor footer{
     grid-area: footer;
-    background-color: rgba(0, 0, 0, 0.842);
-    border-top: 4px solid #0dd6ec;
+    background-color: #05668d;
+    box-shadow: .5px .5px 5px #000;
 }
 
 .datosClinica{
@@ -385,7 +386,7 @@ main #servicios{
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: white;
+    color: #f0f3bd;
 }
 
 .redes_S{
@@ -395,12 +396,12 @@ main #servicios{
 }
 
 .redes_S img{
-    width: 40px;
-    margin: 10px 20px;
+    width: 60px;
+    margin: 10px;
 }
 
 .copyR{
-    color: white;
+    color: #f0f3bd;
     display: flex;  
     justify-content: flex-end;
     margin: 30px 20px 10px 0;
@@ -409,22 +410,22 @@ main #servicios{
 /* animacion cambio de color titulos*/
 @keyframes cambiarColor{
     0%{
-        color: #02ff96;
+        color: #05668d;
     }
 
     25%{
-        color: #00d39e;
+        color: #028090;
     }
 
     50%{
-        color: #00968e;
+        color: #00a896;
     }
 
     75%{
-        color: #6aeaf8;
+        color: #02c39a;
     }
     100%{
-        color:#0dd6ec;
+        color:#05668d;
     }
 }
 
@@ -432,6 +433,7 @@ main #servicios{
 /* header */
 .contenedor header{
     grid-area: header;
+    position: relative;
     width: 100%;
     height: 120px;
     box-shadow: 1px 1px 5px #000;
@@ -442,132 +444,30 @@ main #servicios{
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,auto);
+    grid-template-rows: repeat(2,auto);
     grid-template-areas: 
     "datD datD datD"
-    "cartU cartU cartU"
-    "cartD cartD cartD"
     "datU datU datU"
     ;
     background-color: rgba(228, 224, 224, 0.466);
 }
 
-/* primer trio de cartas */
-#pag__servicios .primCartas{
-    grid-area: cartU;
+/* Sonreí feliz con SMILE */
+#pag__servicios .service{
+    grid-area:datD ;
     display: flex;
-    justify-content: space-around;
-    margin: 100px 20px 50px 20px;
-}
-
-/* carta 1: ortodoncia */
-.carta__primeraServ{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../assets/images/bracket-tratamiento.jpg);
-    background-size:cover ;
-    background-repeat: no-repeat;
-    background-position: center top;
-}
-
-/* carta 2: blanqueamiento */
-.carta__segundaServ{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../assets/images/blanqueamiento.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-/* carta 3: invisaling */
-.carta__terceraServ{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../assets/images/invisalight.png);
-    background-size:cover ;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-}
-
-/* segundo trio de cartas */
-#pag__servicios .segCartas{
-    grid-area: cartD;
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 20px;
-}
-
-/* carta 4: endodoncia */
-.carta__cuartaServ{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../assets/images/endodoncia-nueva.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-/* carta 5: implantologia */
-.carta__quintaServ{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../assets/images/tsyos.jpg);
-    background-size:cover ;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-/* carta 6: carillas */
-.carta__sextaServ{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../assets/images/carillas.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.carta__primeraServ,.carta__segundaServ,.carta__terceraServ,.carta__cuartaServ,
-.carta__quintaServ,.carta__sextaServ{
-    border: groove #0dd6ec;
-    filter: grayscale(100%);
-    display: flex;
-    width: 30%;
-    height: 30vh;
-    text-align: center;
+    text-align:center;
     align-items: center;
-    justify-content:center;
-    color: transparent;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 0 50px;
 }
 
-/* animacion cartas */
-.carta__primeraServ:hover,.carta__segundaServ:hover,.carta__terceraServ:hover,.carta__cuartaServ:hover,
-.carta__quintaServ:hover,.carta__sextaServ:hover{
-    border: groove #0dd6ec;
-    filter: grayscale(0);
-    transition-duration: 1.5s;
-    transition-delay: .3s;
-    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
-    color: white;
+.service h3{
+    animation-name: cambiarColor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 /* datos de servicios */
@@ -592,25 +492,7 @@ main #servicios{
 }
 
 .cajas h3{
-    color: #0dd6eccb;
-}
-
-/* Sonreí feliz con SMILE */
-#pag__servicios .service{
-    grid-area:datD ;
-    display: flex;
-    text-align:center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    padding: 0 50px;
-}
-
-.service h3{
-    animation-name: cambiarColor;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    color: #02c39a;
 }
 
 /* ------------------------------------ OBRA SOCIAL ------------------------------*/
@@ -685,7 +567,7 @@ main #servicios{
 }
 .publicidad img{
     width: 300px;
-    border: groove #0dd6ec;
+    border: solid #05668d;
 }
 
 /*seccion medios de pagos*/
@@ -707,6 +589,7 @@ main #servicios{
 }
 .medios__pago  div{
     margin: 40px 0;
+    margin-left: 25px;
 }
 /* ---------------------------------------Nuestra Clinica--------------------------------------- */
 
@@ -735,7 +618,9 @@ main #servicios{
 
 .main__clin .figuras img{
     margin: 50px 20px;
-    border: groove #0dd6ec;
+    border: solid #05668d;
+    box-shadow: 1px 1px 5px #000;
+
 }
 
 .main__clin .info_clin{
@@ -761,7 +646,7 @@ main #servicios{
 }
 
 .imgClin2 img{
-    border: groove #0dd6ec;
+    border: solid #05668d;
 }
 
 .main__clin .nuestra-clinica{
@@ -791,7 +676,6 @@ main #servicios{
 }
 
 /* ---------------------------Contacto--------------------- */
-
 .contenedor .mainCont{
     width: 100%;
     grid-area: main;
@@ -809,12 +693,13 @@ main #servicios{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: bottom bottom ;
-    box-shadow: 1px 1px 5px #000;
 }
+
+
 
 .mainCont .formulario{
     grid-area: form;
-    background: rgb(0, 0, 0,.6);
+    background: rgb(0, 0, 0,.8);
     width: 90%;
     max-width: 650px;
     margin: auto;
@@ -825,30 +710,30 @@ main #servicios{
 }
 
 .formulario .form-contacto{
-    color: #0dd6ec;
+    color: #00a896;
     text-align: center;
 } 
 .formulario .form-contacto samp{
-    color: #fff;
+    color: white;
 }
 
 .formulario .form-label{
     display: block;
-    color: #0dd6ec;
-    position: relative;
+    color: #00a896;
+    font-weight: bold;
 }
 
 .formulario .form-input, .form-textarea,select{
     background: rgb(0, 0, 0,.7);
     border: none;
     outline: none;
-    border-bottom: 2px solid #0dd6ec;
+    border-bottom: 2px solid #00a896;
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 2px;
     font-size: 14px;
-    color: #fff;
+    color: white;
 }
 .formulario .form-textarea{
     resize: vertical;
@@ -860,19 +745,15 @@ main #servicios{
 .formulario .btn-submit{
     width: 100%;
     outline: none;
-    background-color:#0dd6ec;
+    background-color:#00a896;
     font-size: 16px;
-    color: #fff;
+    color: white;
     border: none;
     padding: 15px 0;
     cursor: pointer;
     transition: all .8s ease;
 }
 
-.formulario .btn-submit:hover{
-    background: #06a6b8;
-    font-weight: bold;
-}
 
 .mainCont .maps{
     grid-area: map;
@@ -960,7 +841,6 @@ main #servicios{
         font-size: 19px;
     }
 
-        /* main home*/
     main #clinica{
 
         grid-template-columns: 1fr;
@@ -1004,6 +884,10 @@ main #servicios{
         width: 75px;
     }
 
+    .medios__pago  div{
+        margin-left: 0px;
+    }
+
 }
 
 @media screen and (max-width:768px) {
@@ -1033,10 +917,11 @@ main #servicios{
 
     .nav__menu{
         position:relative;
+        border-top: 2px solid #05668d;
         left: -100%;
-        top: 8px;
+        top: 14px;
         bottom: 0;
-        background-color: #0dd6ec;
+        background-color: #028090;
         width: 100%;
         height: 50vh;
         display: flex;
@@ -1057,7 +942,7 @@ main #servicios{
     }
     nav ul li a{
         font-size: 18px;
-        font-weight: bold;
+        color: #f0f3bd;
 
     }
     .nav__menu li a:hover{
@@ -1065,16 +950,6 @@ main #servicios{
         font-weight: bold;
         color: rgba(0, 0, 0,.7);
         text-decoration: 1.5px underline ;
-    }
-
-    main #servicios{
-
-        grid-template-columns:1fr;
-        grid-template-rows: repeat(3,auto);
-        grid-template-areas: 
-        "parUno"
-        "parDos"
-        "parTres";
     }
 
     .copyR{
@@ -1086,35 +961,6 @@ main #servicios{
     .contenedor header{
         height: 100px;
     }
-
-    #pag__servicios .primCartas{
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding-top: 30px;
-    }
-
-    #pag__servicios .segCartas{
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding-bottom: 30px;
-    }
-
-    .carta__primeraServ,.carta__segundaServ,.carta__terceraServ,.carta__cuartaServ,
-    .carta__quintaServ,.carta__sextaServ{
-        border: groove #0dd6ec;
-        filter: grayscale(100%);
-        display: flex;
-        width: 80%;
-        height: 40vh;
-        text-align: center;
-        align-items: center;
-        justify-content:center;
-        color: transparent;
-        border-radius:10px;
-        margin: 30px 0;
-}
 
     /* nuestra-clinica */
     .contenedor .main__clin{
@@ -1130,19 +976,10 @@ main #servicios{
         "datClin1"
         ;
     }
-
-    .botonEnv{
-        position: relative;
-        left: 50%;
-        justify-content: center;
-        color: rgba(0, 0, 0, 0.678);
-        font-weight: bold;
-        margin: 30px 0;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-
     
+    .imgClin2 img{
+        width: 80%;
+    }
 
 }
 
@@ -1156,12 +993,6 @@ main #servicios{
         margin-top: 30px;
     }
 
-    /* servicios */
-
-    .carta__primeraServ h3,.carta__segundaServ h3,.carta__terceraServ h3,.carta__cuartaServ h3,
-    .carta__quintaServ h3,.carta__sextaServ h3{
-        font-size: 12px;
-    }
     /* obra social */
     .mutuales__primeras div{
         display: flex;
@@ -1240,12 +1071,9 @@ main #servicios{
     }
     .carta__primera,.carta__Segunda,.carta__tercera,
     .carta__Cuarta,.carta__quinta,.carta__sexta{
-        width: 40%;
+        width:80%;
     }
     /* nuestra clinica */
-    .imgClin2 img{
-        width: 250px;
-    }
 
     .nuestra-clinica div {
         padding: 0 30px;
@@ -1282,11 +1110,11 @@ main #servicios{
         right: 15px;
     }
 
-    .parUno{
+    .cartas{
         width: 100%;
     }
 
-    .parUno h3{
+    .cartas h3{
         font-size: 10px;
     }
 
@@ -1300,11 +1128,6 @@ main #servicios{
     .copyR{
         font-size: 10px;
         text-align: center;
-    }
-    /* servicio */
-    .carta__primeraServ h3,.carta__segundaServ h3,.carta__terceraServ h3,.carta__cuartaServ h3,
-    .carta__quintaServ h3,.carta__sextaServ h3{
-        font-size: 8px;
     }
 
     /* .nuestra-clinica */
