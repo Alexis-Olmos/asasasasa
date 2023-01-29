@@ -1,5 +1,4 @@
 .contenedor{
-    @include grilla-contenedor;
     header{
         grid-area: header;
         position: relative;

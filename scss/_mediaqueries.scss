@@ -153,12 +153,7 @@
                 "article"
                 "asideUno"
                 "asideDos";
-                .img-clinica{
-                    img{
-                        width: 700px;
-                        padding: 40px;
-                    }
-                }
+
             }
 
             #servicios{
@@ -209,12 +204,17 @@
 
 }
 
+
+
 @media screen and (max-width:768px) {
     .contenedor{
     /* -------home---------- */
         .headerHome{
         position: relative;
+        height: 80px;
+        
         nav{
+            box-shadow: $sombra;
             height: 100px;
             .logo{
                 padding: 20px 20px;
@@ -227,7 +227,7 @@
                 position: absolute;
                 border-top: 2px solid #05668d;
                 left: -100%;
-                top: 120px;
+                top: 100px;
                 bottom: 0;
                 background-color: #028090;
                 width: 100%;
@@ -259,7 +259,9 @@
         }
         }
         header{
+            height: 80px;
         nav{
+            box-shadow: $sombra;
             height: 100px;
             .logo{
                 padding: 20px 20px;
@@ -272,7 +274,7 @@
                 position: absolute;
                 border-top: 2px solid #05668d;
                 left: -100%;
-                top: 120px;
+                top: 100px;
                 bottom: 0;
                 background-color: #028090;
                 width: 100%;
@@ -368,9 +370,6 @@
                     }
                 }
             }
-            .publicidad{
-                display:none;
-            }
             .medios__pago{
                 flex-direction: column;
                 align-items: center;
@@ -419,11 +418,12 @@
 
 @media screen and (max-width:500px) {
         /* home */
-    .clinica__trat .img{
-        display: none;
-    }
-
     .contenedor{
+        footer{
+            .copyR{
+                font-size: 10px;
+            }
+        }
     /* service */
         #pag__servicios{
             .cajas{
@@ -459,7 +459,6 @@
     .contenedor{
     /* home */
         header{
-            height: 80px;
             nav{
                 .logo{
                     padding: 20px;
@@ -488,7 +487,6 @@
             }
         }
 
-
         main{
             #servicios{
                 .cartas{
@@ -502,11 +500,6 @@
                         }
                     }
                 }
-            }
-        }
-        footer{
-            .copyR{
-                font-size: 10px;
             }
         }
     }

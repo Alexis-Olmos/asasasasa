@@ -28,12 +28,14 @@
             .img-clinica{
                 grid-area: article;
                 display: flex;
+                align-items: center;
+                justify-content: center;
                 img{
-                    max-width: 100%;
-                    @include tamaño(800px, auto);
-                    padding: 40px;
-                    margin: auto;
+                    box-shadow: $sombra;
+                    max-width: 80%;
                     border-radius: 50px;
+                    margin-bottom: 40px;
+                    border: 2px solid map-get($coloresClinica, azul);
                 }
             }
             .clinica__datos{
