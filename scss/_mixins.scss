@@ -1,0 +1,191 @@
+@mixin reseteo-general{
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+@mixin tamaño($width, $height)
+{
+    height: $height;
+    width: $width;
+}
+
+@mixin grilla-contenedor{
+    @include tamaño(100%,100vh);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main"
+    "main main main"
+    "footer footer footer";
+}
+
+@mixin checkBtn{
+    font-size: 25px;
+    color: map-get($coloresClinica, azul);
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+@mixin enlaces{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+        li{
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 127px;
+            margin: 0 10px;
+            a{
+                color: map-get($coloresClinica, enlace );
+                font-size: map-get($tamañoFuente, enlace );
+                padding: 7px 13px;
+                &:hover{
+                    border-top: 3px solid map-get($coloresClinica,verde);
+                    font-weight: bold;
+                    color: map-get($coloresClinica, azul);
+                }
+            }
+        }
+}
+
+@mixin navegador{
+    nav{
+        background-color: map-get($backgroundClinica , blanco);
+        @include tamaño(100%,120px);
+        .logo{
+            display: flex;
+            position: absolute;
+            padding: 20px;
+            img{
+                @include tamaño(80px, 80px)
+            }
+            .titulo{
+                font-size: map-get($tamañoFuente, titulo);
+                margin-top: 20px;
+                margin-left: 10px;
+                color: map-get($coloresClinica , azul ) ;
+            }
+        }
+        .nav__input{
+            display: none;
+        }
+        .nav__label{
+            @include checkBtn;
+        }
+
+        ul{
+            @include enlaces;
+        }
+    }
+}
+
+@mixin grilla-main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "sectUno sectUno sectUno"
+    "sectDos sectDos sectDos"
+    "sectTres sectTres sectTres";
+}
+
+@mixin seccionSmile{
+    grid-area: sectUno;
+    @include tamaño(100%,80vh);
+    background-image: $backgroundSmile;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+    color: map-get($coloresClinica, blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: map-get($tamañoFuente, seccSmile);
+}
+
+@mixin clinica {
+    grid-area: sectDos;
+    display: grid;
+    grid-template-columns: 0.8fr 0.5fr;
+    grid-template-rows: 1.3fr 0.7fr;
+    grid-template-areas: 
+    "article asideUno"
+    "asideDos asideDos";
+}
+@mixin servicios{
+    grid-area: sectTres;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "cartas cartas cartas"
+    "cartas cartas cartas";
+    padding: 90px 50px;
+    background-color: map-get($backgroundClinica, transparente);
+}
+
+@mixin cartas{
+    border: 5px solid map-get($coloresClinica , verde );
+    display: flex;
+    flex-direction: column;
+    @include tamaño(30%,30vh);
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+    margin: 20px;
+    &:hover{
+        transition-duration: 1.5s;
+        transition-delay: .3s;
+        box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8);
+    }
+}
+
+@mixin cambio-color{
+    @keyframes cambiarColor{
+        0%{
+            color: #05668d;
+        }
+    
+        25%{
+            color: #028090;
+        }
+    
+        50%{
+            color: #00a896;
+        }
+    
+        75%{
+            color: #02c39a;
+        }
+        100%{
+            color:#05668d;
+        }
+    }
+}
+
+@mixin formulario{
+    background: #000000b3;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #00a896;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: white;
+}
+

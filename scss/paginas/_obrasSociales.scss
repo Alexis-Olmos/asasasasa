@@ -1,0 +1,93 @@
+.contenedor{
+    .main_ObS{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,auto);
+    
+        grid-template-areas: 
+        "mutual mutual asideObraS"
+        "mutual2 mutual2 asideObraS"
+        "pago pago pago"
+        "medios medios medios"
+        ;
+        .mutuales__primeras{
+            grid-area: mutual;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 40px 0 40px;
+            h2{
+                animation-name: cambiarColor;
+                @include cambio-color;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                margin-bottom: 30px;
+            }
+            .l-swis,.l-sanc,.l-consulm{
+                width: 200px;
+            }
+            div{
+                display: flex;
+                img{
+                    margin: 0 30px;
+                }
+            }
+        }
+        .mutuales__segundas{
+            grid-area: mutual2;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content:center;
+            margin-bottom: 80px;
+            .iosfa{
+                width: 200px;
+            }
+            .osmecon{
+                width: 130px;
+            }
+            .omint{
+                width: 150px;
+            }
+            div{
+                img{
+                    margin: 0 30px;
+                }
+            }
+    
+        }
+        .publicidad{
+            grid-area: asideObraS;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 80px 0;
+            width: 100%;
+            img{
+                width: 300px;
+                border: 3px solid map-get($coloresClinica, azul );
+            }
+        }
+        .pago{
+            grid-area:pago ;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        .medios__pago{
+            grid-area: medios;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            div{
+                margin: 40px;
+            }
+        }
+    
+    }
+}

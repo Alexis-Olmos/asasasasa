@@ -1,0 +1,75 @@
+.contenedor{
+    .mainCont{
+        width: 100%;
+        grid-area: main;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: 
+        "form "
+        "map";
+        background-color: map-get($backgroundClinica, contacto );
+        background-image: url(/assets/images/odont.webp);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: bottom bottom ;
+        .formulario{
+            grid-area: form;
+            background: #000000cc;
+            width: 90%;
+            max-width: 650px;
+            margin: auto;
+            padding: 5px 35px;
+            margin-top: 30px;
+            padding-bottom: 30px;
+            border-radius: 3px;
+            .form-label{
+                display: block;
+                color: #00a896;
+                font-weight: bold;
+            }
+            .form-input, .form-textarea,select{
+                @include formulario;
+            }
+
+            .form-textarea{
+                resize: vertical;
+                max-height: 300px;
+                min-height: 100px;
+            }
+        
+            .btn-submit{
+                width: 100%;
+                outline: none;
+                background-color:#00a896;
+                font-size: 16px;
+                color: white;
+                border: none;
+                padding: 15px 0;
+                cursor: pointer;
+                transition: all .8s ease;
+            }
+            .form-contacto{
+                color: #00a896;
+                text-align: center;            
+                samp{
+                    color: white;
+                }
+            }
+        }
+    
+        .maps{
+            grid-area: map;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            .mapaC{
+                padding: 20px;
+                @include tamaño(100%,300px)
+            }
+        }
+    }
+}

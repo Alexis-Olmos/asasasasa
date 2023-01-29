@@ -1,0 +1,63 @@
+.contenedor{
+    @include grilla-contenedor;
+    header{
+        grid-area: header;
+        position: relative;
+        @include tamaño (100%,120px);
+        box-shadow: $sombra;
+        @include navegador;
+    }
+
+    #pag__servicios{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: 
+        "datD datD datD"
+        "datU datU datU";
+        background-color: map-get($backgroundClinica , transparente );
+        
+        .service{
+            grid-area:datD ;
+            display: flex;
+            text-align:center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            padding: 0 50px;
+            .introS{
+                h3{
+                    @include cambio-color;
+                    animation-name: cambiarColor;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+        
+        .cajas{
+            grid-area:datU ;
+            margin: 0 40px;
+            padding: 20px;
+            border-radius: 20px;
+            background-image: linear-gradient(
+                0deg,
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+                )
+                ,url(../assets/images/paciente2.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            span{
+                color: white;
+                margin: 0 20px;
+                h3{
+                    color: map-get($coloresClinica , verde );
+                }
+            }
+        }
+    }
+}
