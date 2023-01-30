@@ -8,7 +8,7 @@
         grid-template-areas: 
         "form "
         "map";
-        background-color: map-get($backgroundClinica, contacto );
+        background-color: map-get($coloresClinica, contacto );
         background-image: url(/assets/images/odont.webp);
         background-size: cover;
         background-attachment: fixed;
@@ -62,8 +62,7 @@
         .maps{
             grid-area: map;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            @include centrado(center,center,center);
             margin-top: 100px;
             margin-bottom: 50px;
             .mapaC{

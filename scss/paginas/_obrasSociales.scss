@@ -4,20 +4,16 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(4,auto);
-    
         grid-template-areas: 
         "mutual mutual"
         "mutual2 mutual2"
         "pago pago"
-        "medios medios"
-        ;
+        "medios medios";
         .mutuales__primeras{
             grid-area: mutual;
             display: flex;
             flex-direction: column;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
+            @include centrado(center,center,center);
             margin: 40px 40px 0 40px;
             h2{
                 animation-name: cambiarColor;
@@ -39,9 +35,7 @@
         .mutuales__segundas{
             grid-area: mutual2;
             display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content:center;
+            @include centrado(center,center,center);
             margin-bottom: 80px;
             .iosfa{
                 width: 200px;
@@ -63,17 +57,13 @@
             grid-area:pago ;
             display: flex;
             flex-direction: column;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
+            @include centrado(center,center,center);
             overflow: hidden;
         }
         .medios__pago{
             grid-area: medios;
             display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            text-align: center;
+            @include centrado(center,center,space-evenly);
             overflow: hidden;
             div{
                 margin: 40px;

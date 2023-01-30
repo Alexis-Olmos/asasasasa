@@ -15,14 +15,12 @@
         grid-template-areas: 
         "datD datD datD"
         "datU datU datU";
-        background-color: map-get($backgroundClinica , transparente );
+        background-color: map-get($coloresClinica , transparente );
         
         .service{
             grid-area:datD ;
             display: flex;
-            text-align:center;
-            align-items: center;
-            justify-content: center;
+            @include centrado(center,center,center);
             margin-top: 100px;
             margin-bottom: 50px;
             padding: 0 50px;

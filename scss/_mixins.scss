@@ -7,10 +7,21 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
+@mixin centrado($text, $item,$justify)
+{
+    text-align: $text;
+    align-items: $item;
+    justify-content: $justify;
+}
+
 @mixin tamaño($width, $height)
 {
     height: $height;
     width: $width;
+}
+
+@mixin bordeSolido{
+    border: 3px solid map-get($coloresClinica, azul);
 }
 
 @mixin grilla-contenedor{
@@ -47,7 +58,7 @@
             margin: 0 10px;
             a{
                 color: map-get($coloresClinica, enlace );
-                font-size: map-get($tamañoFuente, enlace );
+                font-size: 18px;
                 padding: 7px 13px;
                 &:hover{
                     border-top: 3px solid map-get($coloresClinica,verde);
@@ -60,7 +71,7 @@
 
 @mixin navegador{
     nav{
-        background-color: map-get($backgroundClinica , blanco);
+        background-color: map-get($coloresClinica, blanco);
         @include tamaño(100%,120px);
         .logo{
             display: flex;
@@ -70,7 +81,7 @@
                 @include tamaño(80px, 80px)
             }
             .titulo{
-                font-size: map-get($tamañoFuente, titulo);
+                font-size: 36px;
                 margin-top: 20px;
                 margin-left: 10px;
                 color: map-get($coloresClinica , azul ) ;
@@ -113,7 +124,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-size: map-get($tamañoFuente, seccSmile);
+    font-size: 20px;
 }
 
 @mixin clinica {
@@ -134,7 +145,7 @@
     "cartas cartas cartas"
     "cartas cartas cartas";
     padding: 90px 50px;
-    background-color: map-get($backgroundClinica, transparente);
+    background-color: map-get($coloresClinica, transparente);
 }
 
 @mixin cartas{
