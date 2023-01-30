@@ -1,7 +1,6 @@
 /* ---------------------------MEDIA QUERIES--------------------- */
 /* desktop */
 @media screen and (max-width:1200px) {
-    /* home */
     .contenedor{
         .headerHome{
             nav{
@@ -43,7 +42,6 @@
 }
 
 @media screen and (max-width:1024px) {
-    /* home */
     .contenedor{
         .headerHome{
             nav{
@@ -91,8 +89,6 @@
                 }
             }
         }
-
-    /* obras sociales e img */
         .main_ObS{
             grid-area: main;
             display: grid;
@@ -110,7 +106,6 @@
 }
 
 @media screen and (max-width:900px) {
-    /*home*/
     .contenedor{
         .headerHome{
             nav{
@@ -173,7 +168,6 @@
                 margin:20px;
             }
         }
-    /*obras sociales*/
         .main_ObS{
             .mutuales__primeras{
                 div{
@@ -208,7 +202,6 @@
 
 @media screen and (max-width:768px) {
     .contenedor{
-    /* -------home---------- */
         .headerHome{
         position: relative;
         height: 80px;
@@ -311,7 +304,6 @@
                 max-height: 50vh;
             }
         }
-    /* nuestra-clinica */
         .main__clin{
             grid-area: main;
             display: grid;
@@ -332,7 +324,6 @@
 }
 
 @media screen and (max-width:700px) {
-        /* home */
     .contenedor{
         main{
             #img-portada{
@@ -348,7 +339,6 @@
             }
         }
 
-    /* obra social */
         .main_ObS{
             .mutuales__primeras{
                 div{
@@ -383,8 +373,6 @@
                 }
             }
         }
-
-    /* .nuestra-clinica */
         .main__clin{
             .video{
                 display: flex;
@@ -398,7 +386,6 @@
 
 
 @media screen and (max-width:615px){
-    /* home */
     .contenedor{
         main{
             #servicios{
@@ -417,14 +404,12 @@
 
 
 @media screen and (max-width:500px) {
-        /* home */
     .contenedor{
         footer{
             .copyR{
                 font-size: 10px;
             }
         }
-    /* service */
         #pag__servicios{
             .cajas{
                 margin: 0 10px;
@@ -433,7 +418,6 @@
                 background-color: #413f3f;
             }
         }
-    /* nuestra clinica */
         .main__clin{
             .nuestra-clinica{
                 div{
@@ -442,7 +426,6 @@
             }
         }
 
-    /* contacto */
         .mainCont{
             .maps{
                 .mapaC{
@@ -457,7 +440,6 @@
 
 @media screen and (max-width:380px) {
     .contenedor{
-    /* home */
         header{
             nav{
                 .logo{
@@ -486,7 +468,7 @@
                 }
             }
         }
-
+        // esto es un comentrio
         main{
             #servicios{
                 .cartas{

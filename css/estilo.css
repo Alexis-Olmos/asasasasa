@@ -13,11 +13,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "header header header"
- "main main main"
- "main main main"
- "main main main"
- "footer footer footer"; }
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "footer footer footer"; }
   .contenedor .headerHome {
     grid-area: header;
     position: fixed;
@@ -70,14 +66,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "sectUno sectUno sectUno"
- "sectDos sectDos sectDos"
- "sectTres sectTres sectTres"; }
+    grid-template-areas: "sectUno sectUno sectUno" "sectDos sectDos sectDos" "sectTres sectTres sectTres"; }
     .contenedor main #img-portada {
       grid-area: sectUno;
       height: 80vh;
       width: 100%;
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/esta.jpg);
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/esta.jpg);
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -95,8 +89,7 @@
       display: grid;
       grid-template-columns: 0.8fr 0.5fr;
       grid-template-rows: 1.3fr 0.7fr;
-      grid-template-areas: "article asideUno"
- "asideDos asideDos"; }
+      grid-template-areas: "article asideUno" "asideDos asideDos"; }
       .contenedor main #clinica .img-clinica {
         grid-area: article;
         display: flex;
@@ -120,7 +113,7 @@
           justify-content: center;
           padding: 0 30px;
           margin: 0 20px;
-          border: 2px dotted #05668d;
+          border: 3px solid #05668d;
           color: #000000ad; }
           .contenedor main #clinica .clinica__datos div h2 {
             text-align: center;
@@ -170,8 +163,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-template-areas: "cartas cartas cartas"
- "cartas cartas cartas";
+      grid-template-areas: "cartas cartas cartas" "cartas cartas cartas";
       padding: 90px 50px;
       background-color: #e4e0e077; }
       .contenedor main #servicios .cartas {
@@ -214,7 +206,7 @@
             transition-delay: .3s;
             box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8); }
         .contenedor main #servicios .cartas .carta__Segunda {
-          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/Clinica.webp);
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/blanqueamiento.jpg);
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
@@ -384,8 +376,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "datD datD datD"
- "datU datU datU";
+  grid-template-areas: "datD datD datD" "datU datU datU";
   background-color: #e4e0e077; }
   .contenedor #pag__servicios .service {
     grid-area: datD;
@@ -432,10 +423,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "mutual mutual"
- "mutual2 mutual2"
- "pago pago"
- "medios medios"; }
+  grid-template-areas: "mutual mutual" "mutual2 mutual2" "pago pago" "medios medios"; }
   .contenedor .main_ObS .mutuales__primeras {
     grid-area: mutual;
     display: flex;
@@ -505,14 +493,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "imgClin imgClin imgClin"
- "datClin datClin imgClin2"
- "datClin1 datClin1 datClin1"; }
+  grid-template-areas: "imgClin imgClin imgClin" "datClin datClin imgClin2" "datClin1 datClin1 datClin1"; }
   .contenedor .main__clin #img-portada {
     grid-area: imgClin;
     width: 100%;
     height: 60vh;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/Clinica.webp);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/Clinica.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -565,8 +551,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "form "
- "map";
+  grid-template-areas: "form " "map";
   background-color: #73c3cc3b;
   background-image: url(/assets/images/odont.webp);
   background-size: cover;
@@ -633,7 +618,6 @@
 /* ---------------------------MEDIA QUERIES--------------------- */
 /* desktop */
 @media screen and (max-width: 1200px) {
-  /* home */
   .contenedor .headerHome nav .logo .titulo {
     font-size: 25px; }
   .contenedor .headerHome nav ul li {
@@ -650,207 +634,197 @@
       padding: 5px 10px; } }
 
 @media screen and (max-width: 1024px) {
-    .contenedor .headerHome nav .logo {
-      padding: 20px 20px; }
-      .contenedor .headerHome nav .logo img {
-        width: 60px;
-        height: 60px; }
-      .contenedor .headerHome nav .logo .titulo {
-        margin-left: 10px; }
-    .contenedor .headerHome nav ul {
-      margin-right: 10px; }
-      .contenedor .headerHome nav ul li a {
-        font-size: 12px;
-        padding: 5px 5px; }
-    .contenedor header nav .logo {
-      padding: 20px 20px; }
-      .contenedor header nav .logo img {
-        width: 60px;
-        height: 60px; }
-      .contenedor header nav .logo .titulo {
-        margin-left: 10px; }
-    .contenedor header nav ul {
-      margin-right: 10px; }
-      .contenedor header nav ul li a {
-        font-size: 12px;
-        padding: 5px 5px; }
-    .contenedor .main_ObS {
-      grid-area: main;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(5, auto);
-      grid-template-areas: "mutual"
- "mutual2"
- "asideObraS"
- "pago"
- "medios"; } }
+  .contenedor .headerHome nav .logo {
+    padding: 20px 20px; }
+    .contenedor .headerHome nav .logo img {
+      width: 60px;
+      height: 60px; }
+    .contenedor .headerHome nav .logo .titulo {
+      margin-left: 10px; }
+  .contenedor .headerHome nav ul {
+    margin-right: 10px; }
+    .contenedor .headerHome nav ul li a {
+      font-size: 12px;
+      padding: 5px 5px; }
+  .contenedor header nav .logo {
+    padding: 20px 20px; }
+    .contenedor header nav .logo img {
+      width: 60px;
+      height: 60px; }
+    .contenedor header nav .logo .titulo {
+      margin-left: 10px; }
+  .contenedor header nav ul {
+    margin-right: 10px; }
+    .contenedor header nav ul li a {
+      font-size: 12px;
+      padding: 5px 5px; }
+  .contenedor .main_ObS {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "mutual" "mutual2" "asideObraS" "pago" "medios"; } }
 
 @media screen and (max-width: 900px) {
-    .contenedor .headerHome nav .logo {
-      padding: 30px 20px; }
-      .contenedor .headerHome nav .logo .titulo {
-        font-size: 19px; }
-    .contenedor .headerHome nav ul li {
-      line-height: 125px; }
-    .contenedor header nav .logo {
-      padding: 30px 20px; }
-      .contenedor header nav .logo .titulo {
-        font-size: 19px; }
-    .contenedor header nav ul li {
-      line-height: 125px; }
-    .contenedor main #clinica {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, auto);
-      grid-template-areas: "article"
- "asideUno"
- "asideDos"; }
-    .contenedor main #servicios .cartas .carta__primera, .contenedor main #servicios .cartas .carta__Segunda, .contenedor main #servicios .cartas .carta__tercera,
-    .contenedor main #servicios .cartas .carta__Cuarta, .contenedor main #servicios .cartas .carta__quinta, .contenedor main #servicios .cartas .carta__sexta {
-      width: 60%;
-      height: 40vh; }
-    .contenedor footer .copyR {
-      align-items: center;
-      justify-content: center;
-      margin: 20px; }
-    .contenedor .main_ObS .mutuales__primeras div img {
-      margin: 0 15px; }
-    .contenedor .main_ObS .mutuales__primeras div .l-swis, .contenedor .main_ObS .mutuales__primeras div .l-sanc, .contenedor .main_ObS .mutuales__primeras div .l-consulm {
-      width: 150px; }
-    .contenedor .main_ObS .mutuales__segundas div .iosfa {
-      width: 150px; }
-    .contenedor .main_ObS .mutuales__segundas div .osmecon {
-      width: 65px; }
-    .contenedor .main_ObS .mutuales__segundas div .omint {
-      width: 75px; } }
+  .contenedor .headerHome nav .logo {
+    padding: 30px 20px; }
+    .contenedor .headerHome nav .logo .titulo {
+      font-size: 19px; }
+  .contenedor .headerHome nav ul li {
+    line-height: 125px; }
+  .contenedor header nav .logo {
+    padding: 30px 20px; }
+    .contenedor header nav .logo .titulo {
+      font-size: 19px; }
+  .contenedor header nav ul li {
+    line-height: 125px; }
+  .contenedor main #clinica {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "article" "asideUno" "asideDos"; }
+  .contenedor main #servicios .cartas .carta__primera, .contenedor main #servicios .cartas .carta__Segunda, .contenedor main #servicios .cartas .carta__tercera,
+  .contenedor main #servicios .cartas .carta__Cuarta, .contenedor main #servicios .cartas .carta__quinta, .contenedor main #servicios .cartas .carta__sexta {
+    width: 60%;
+    height: 40vh; }
+  .contenedor footer .copyR {
+    align-items: center;
+    justify-content: center;
+    margin: 20px; }
+  .contenedor .main_ObS .mutuales__primeras div img {
+    margin: 0 15px; }
+  .contenedor .main_ObS .mutuales__primeras div .l-swis, .contenedor .main_ObS .mutuales__primeras div .l-sanc, .contenedor .main_ObS .mutuales__primeras div .l-consulm {
+    width: 150px; }
+  .contenedor .main_ObS .mutuales__segundas div .iosfa {
+    width: 150px; }
+  .contenedor .main_ObS .mutuales__segundas div .osmecon {
+    width: 65px; }
+  .contenedor .main_ObS .mutuales__segundas div .omint {
+    width: 75px; } }
 
 @media screen and (max-width: 768px) {
-    .contenedor .headerHome {
-      position: relative;
-      height: 80px; }
-      .contenedor .headerHome nav {
-        box-shadow: 1px 1px 5px #000;
-        height: 100px; }
-        .contenedor .headerHome nav .logo {
-          padding: 20px 20px; }
-        .contenedor .headerHome nav .nav__label {
-          display: block;
-          padding: 16px 10px; }
-        .contenedor .headerHome nav ul {
-          position: absolute;
-          border-top: 2px solid #05668d;
-          left: -100%;
-          top: 100px;
-          bottom: 0;
-          background-color: #028090;
-          width: 100%;
-          height: 50vh;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-          transition: all 1s ease-in-out; }
-          .contenedor .headerHome nav ul li {
-            margin: 10px 0;
-            padding: 5px 0;
-            line-height: 10px; }
-            .contenedor .headerHome nav ul li a {
-              font-size: 18px;
-              color: #f0f3bd; }
-              .contenedor .headerHome nav ul li a:hover {
-                border-top: none;
-                font-weight: bold;
-                color: rgba(0, 0, 0, 0.7);
-                text-decoration: 1.5px underline; }
-        .contenedor .headerHome nav .nav__input:checked + .nav__menu {
-          left: 0;
-          display: flex; }
-    .contenedor header {
-      height: 80px; }
-      .contenedor header nav {
-        box-shadow: 1px 1px 5px #000;
-        height: 100px; }
-        .contenedor header nav .logo {
-          padding: 20px 20px; }
-        .contenedor header nav .nav__label {
-          display: block;
-          padding: 16px 10px; }
-        .contenedor header nav ul {
-          position: absolute;
-          border-top: 2px solid #05668d;
-          left: -100%;
-          top: 100px;
-          bottom: 0;
-          background-color: #028090;
-          width: 100%;
-          height: 50vh;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-          transition: all 1s ease-in-out; }
-          .contenedor header nav ul li {
-            margin: 10px 0;
-            padding: 5px 0;
-            line-height: 10px; }
-            .contenedor header nav ul li a {
-              font-size: 18px;
-              color: #f0f3bd; }
-              .contenedor header nav ul li a:hover {
-                border-top: none;
-                font-weight: bold;
-                color: rgba(0, 0, 0, 0.7);
-                text-decoration: 1.5px underline; }
-        .contenedor header nav .nav__input:checked + .nav__menu {
-          left: 0;
-          display: flex; }
-    .contenedor main #img-portada {
-      max-height: 50vh; }
-    .contenedor .main__clin {
-      grid-area: main;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, auto);
-      grid-template-areas: "imgClin"
- "datClin"
- "imgClin2"
- "datClin1"; }
-      .contenedor .main__clin .imgClin2 img {
-        width: 80%; } }
+  .contenedor .headerHome {
+    position: relative;
+    height: 80px; }
+    .contenedor .headerHome nav {
+      box-shadow: 1px 1px 5px #000;
+      height: 100px; }
+      .contenedor .headerHome nav .logo {
+        padding: 20px 20px; }
+      .contenedor .headerHome nav .nav__label {
+        display: block;
+        padding: 16px 10px; }
+      .contenedor .headerHome nav ul {
+        position: absolute;
+        border-top: 2px solid #05668d;
+        left: -100%;
+        top: 100px;
+        bottom: 0;
+        background-color: #028090;
+        width: 100%;
+        height: 50vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all 1s ease-in-out; }
+        .contenedor .headerHome nav ul li {
+          margin: 10px 0;
+          padding: 5px 0;
+          line-height: 10px; }
+          .contenedor .headerHome nav ul li a {
+            font-size: 18px;
+            color: #f0f3bd; }
+            .contenedor .headerHome nav ul li a:hover {
+              border-top: none;
+              font-weight: bold;
+              color: rgba(0, 0, 0, 0.7);
+              text-decoration: 1.5px underline; }
+      .contenedor .headerHome nav .nav__input:checked + .nav__menu {
+        left: 0;
+        display: flex; }
+  .contenedor header {
+    height: 80px; }
+    .contenedor header nav {
+      box-shadow: 1px 1px 5px #000;
+      height: 100px; }
+      .contenedor header nav .logo {
+        padding: 20px 20px; }
+      .contenedor header nav .nav__label {
+        display: block;
+        padding: 16px 10px; }
+      .contenedor header nav ul {
+        position: absolute;
+        border-top: 2px solid #05668d;
+        left: -100%;
+        top: 100px;
+        bottom: 0;
+        background-color: #028090;
+        width: 100%;
+        height: 50vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all 1s ease-in-out; }
+        .contenedor header nav ul li {
+          margin: 10px 0;
+          padding: 5px 0;
+          line-height: 10px; }
+          .contenedor header nav ul li a {
+            font-size: 18px;
+            color: #f0f3bd; }
+            .contenedor header nav ul li a:hover {
+              border-top: none;
+              font-weight: bold;
+              color: rgba(0, 0, 0, 0.7);
+              text-decoration: 1.5px underline; }
+      .contenedor header nav .nav__input:checked + .nav__menu {
+        left: 0;
+        display: flex; }
+  .contenedor main #img-portada {
+    max-height: 50vh; }
+  .contenedor .main__clin {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "imgClin" "datClin" "imgClin2" "datClin1"; }
+    .contenedor .main__clin .imgClin2 img {
+      width: 80%; } }
 
 @media screen and (max-width: 700px) {
-    .contenedor main #img-portada .smile h2 {
-      font-size: 20px; }
-    .contenedor main #img-portada .smile p {
-      font-size: 15px;
-      margin-top: 30px; }
-    .contenedor .main_ObS .mutuales__primeras div {
-      display: flex;
-      flex-direction: column;
-      margin-top: 30px; }
-    .contenedor .main_ObS .mutuales__segundas div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      margin-bottom: 10px; }
-      .contenedor .main_ObS .mutuales__segundas div img {
+  .contenedor main #img-portada .smile h2 {
+    font-size: 20px; }
+  .contenedor main #img-portada .smile p {
+    font-size: 15px;
+    margin-top: 30px; }
+  .contenedor .main_ObS .mutuales__primeras div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px; }
+  .contenedor .main_ObS .mutuales__segundas div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px; }
+    .contenedor .main_ObS .mutuales__segundas div img {
+      margin: 20px 0; }
+  .contenedor .main_ObS .medios__pago {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    .contenedor .main_ObS .medios__pago div {
+      margin: 10px 0; }
+      .contenedor .main_ObS .medios__pago div img {
         margin: 20px 0; }
-    .contenedor .main_ObS .medios__pago {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center; }
-      .contenedor .main_ObS .medios__pago div {
-        margin: 10px 0; }
-        .contenedor .main_ObS .medios__pago div img {
-          margin: 20px 0; }
-    .contenedor .main__clin .video {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: auto; } }
+  .contenedor .main__clin .video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto; } }
 
 @media screen and (max-width: 615px) {
-  /* home */
   .contenedor main #servicios .cartas .carta__primera, .contenedor main #servicios .cartas .carta__Segunda, .contenedor main #servicios .cartas .carta__tercera,
   .contenedor main #servicios .cartas .carta__Cuarta, .contenedor main #servicios .cartas .carta__quinta, .contenedor main #servicios .cartas .carta__sexta {
     display: flex;
@@ -858,44 +832,44 @@
     width: 90%; } }
 
 @media screen and (max-width: 500px) {
-    .contenedor footer .copyR {
-      font-size: 10px; }
-    .contenedor #pag__servicios .cajas {
-      margin: 0 10px;
-      padding: 10px;
-      background-image: none;
-      background-color: #413f3f; }
-    .contenedor .main__clin .nuestra-clinica div {
-      padding: 0 30px; }
-    .contenedor .mainCont .maps .mapaC {
-      padding: 10px;
-      width: 90%;
-      height: auto; } }
+  .contenedor footer .copyR {
+    font-size: 10px; }
+  .contenedor #pag__servicios .cajas {
+    margin: 0 10px;
+    padding: 10px;
+    background-image: none;
+    background-color: #413f3f; }
+  .contenedor .main__clin .nuestra-clinica div {
+    padding: 0 30px; }
+  .contenedor .mainCont .maps .mapaC {
+    padding: 10px;
+    width: 90%;
+    height: auto; } }
 
 @media screen and (max-width: 380px) {
-    .contenedor header nav .logo {
-      padding: 20px; }
-      .contenedor header nav .logo img {
-        position: relative;
-        top: 5px;
-        right: 10px;
-        width: 40px;
-        height: 40px; }
-      .contenedor header nav .logo .titulo {
-        font-size: 16px;
-        position: relative;
-        right: 15px; }
-    .contenedor header nav ul li {
-      line-height: 120px; }
-      .contenedor header nav ul li a {
-        font-size: 14px;
-        padding: 5px 10px; }
-    .contenedor main #servicios .cartas {
-      width: 100%; }
-      .contenedor main #servicios .cartas .carta__primera, .contenedor main #servicios .cartas .carta__Segunda, .contenedor main #servicios .cartas .carta__tercera,
-      .contenedor main #servicios .cartas .carta__Cuarta, .contenedor main #servicios .cartas .carta__quinta, .contenedor main #servicios .cartas .carta__sexta {
-        width: 100%;
-        margin: 20px 0; }
-        .contenedor main #servicios .cartas .carta__primera h3, .contenedor main #servicios .cartas .carta__Segunda h3, .contenedor main #servicios .cartas .carta__tercera h3,
-        .contenedor main #servicios .cartas .carta__Cuarta h3, .contenedor main #servicios .cartas .carta__quinta h3, .contenedor main #servicios .cartas .carta__sexta h3 {
-          font-size: 10px; } }
+  .contenedor header nav .logo {
+    padding: 20px; }
+    .contenedor header nav .logo img {
+      position: relative;
+      top: 5px;
+      right: 10px;
+      width: 40px;
+      height: 40px; }
+    .contenedor header nav .logo .titulo {
+      font-size: 16px;
+      position: relative;
+      right: 15px; }
+  .contenedor header nav ul li {
+    line-height: 120px; }
+    .contenedor header nav ul li a {
+      font-size: 14px;
+      padding: 5px 10px; }
+  .contenedor main #servicios .cartas {
+    width: 100%; }
+    .contenedor main #servicios .cartas .carta__primera, .contenedor main #servicios .cartas .carta__Segunda, .contenedor main #servicios .cartas .carta__tercera,
+    .contenedor main #servicios .cartas .carta__Cuarta, .contenedor main #servicios .cartas .carta__quinta, .contenedor main #servicios .cartas .carta__sexta {
+      width: 100%;
+      margin: 20px 0; }
+      .contenedor main #servicios .cartas .carta__primera h3, .contenedor main #servicios .cartas .carta__Segunda h3, .contenedor main #servicios .cartas .carta__tercera h3,
+      .contenedor main #servicios .cartas .carta__Cuarta h3, .contenedor main #servicios .cartas .carta__quinta h3, .contenedor main #servicios .cartas .carta__sexta h3 {
+        font-size: 10px; } }
