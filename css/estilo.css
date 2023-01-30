@@ -13,7 +13,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "footer footer footer"; }
+  grid-template-areas: "header header header"
+ "main main main"
+ "main main main"
+ "main main main"
+ "footer footer footer"; }
   .contenedor .headerHome {
     grid-area: header;
     position: fixed;
@@ -66,12 +70,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "sectUno sectUno sectUno" "sectDos sectDos sectDos" "sectTres sectTres sectTres"; }
+    grid-template-areas: "sectUno sectUno sectUno"
+ "sectDos sectDos sectDos"
+ "sectTres sectTres sectTres"; }
     .contenedor main #img-portada {
       grid-area: sectUno;
       height: 80vh;
       width: 100%;
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/esta.jpg);
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/esta.jpg);
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -89,7 +95,8 @@
       display: grid;
       grid-template-columns: 0.8fr 0.5fr;
       grid-template-rows: 1.3fr 0.7fr;
-      grid-template-areas: "article asideUno" "asideDos asideDos"; }
+      grid-template-areas: "article asideUno"
+ "asideDos asideDos"; }
       .contenedor main #clinica .img-clinica {
         grid-area: article;
         display: flex;
@@ -163,7 +170,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-template-areas: "cartas cartas cartas" "cartas cartas cartas";
+      grid-template-areas: "cartas cartas cartas"
+ "cartas cartas cartas";
       padding: 90px 50px;
       background-color: #e4e0e077; }
       .contenedor main #servicios .cartas {
@@ -206,7 +214,7 @@
             transition-delay: .3s;
             box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.8); }
         .contenedor main #servicios .cartas .carta__Segunda {
-          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/blanqueamiento.jpg);
+          background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/Clinica.webp);
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
@@ -376,7 +384,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "datD datD datD" "datU datU datU";
+  grid-template-areas: "datD datD datD"
+ "datU datU datU";
   background-color: #e4e0e077; }
   .contenedor #pag__servicios .service {
     grid-area: datD;
@@ -423,7 +432,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "mutual mutual" "mutual2 mutual2" "pago pago" "medios medios"; }
+  grid-template-areas: "mutual mutual"
+ "mutual2 mutual2"
+ "pago pago"
+ "medios medios"; }
   .contenedor .main_ObS .mutuales__primeras {
     grid-area: mutual;
     display: flex;
@@ -493,7 +505,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "imgClin imgClin imgClin" "datClin datClin imgClin2" "datClin1 datClin1 datClin1"; }
+  grid-template-areas: "imgClin imgClin imgClin"
+ "datClin datClin imgClin2"
+ "datClin1 datClin1 datClin1"; }
   .contenedor .main__clin #img-portada {
     grid-area: imgClin;
     width: 100%;
@@ -551,7 +565,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "form " "map";
+  grid-template-areas: "form "
+ "map";
   background-color: #73c3cc3b;
   background-image: url(/assets/images/odont.webp);
   background-size: cover;
@@ -635,9 +650,6 @@
       padding: 5px 10px; } }
 
 @media screen and (max-width: 1024px) {
-  /* home */
-  .contenedor {
-    /* obras sociales e img */ }
     .contenedor .headerHome nav .logo {
       padding: 20px 20px; }
       .contenedor .headerHome nav .logo img {
@@ -667,12 +679,13 @@
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(5, auto);
-      grid-template-areas: "mutual" "mutual2" "asideObraS" "pago" "medios"; } }
+      grid-template-areas: "mutual"
+ "mutual2"
+ "asideObraS"
+ "pago"
+ "medios"; } }
 
 @media screen and (max-width: 900px) {
-  /*home*/
-  .contenedor {
-    /*obras sociales*/ }
     .contenedor .headerHome nav .logo {
       padding: 30px 20px; }
       .contenedor .headerHome nav .logo .titulo {
@@ -688,7 +701,9 @@
     .contenedor main #clinica {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, auto);
-      grid-template-areas: "article" "asideUno" "asideDos"; }
+      grid-template-areas: "article"
+ "asideUno"
+ "asideDos"; }
     .contenedor main #servicios .cartas .carta__primera, .contenedor main #servicios .cartas .carta__Segunda, .contenedor main #servicios .cartas .carta__tercera,
     .contenedor main #servicios .cartas .carta__Cuarta, .contenedor main #servicios .cartas .carta__quinta, .contenedor main #servicios .cartas .carta__sexta {
       width: 60%;
@@ -709,9 +724,6 @@
       width: 75px; } }
 
 @media screen and (max-width: 768px) {
-  .contenedor {
-    /* -------home---------- */
-    /* nuestra-clinica */ }
     .contenedor .headerHome {
       position: relative;
       height: 80px; }
@@ -796,15 +808,14 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, auto);
-      grid-template-areas: "imgClin" "datClin" "imgClin2" "datClin1"; }
+      grid-template-areas: "imgClin"
+ "datClin"
+ "imgClin2"
+ "datClin1"; }
       .contenedor .main__clin .imgClin2 img {
         width: 80%; } }
 
 @media screen and (max-width: 700px) {
-  /* home */
-  .contenedor {
-    /* obra social */
-    /* .nuestra-clinica */ }
     .contenedor main #img-portada .smile h2 {
       font-size: 20px; }
     .contenedor main #img-portada .smile p {
@@ -847,11 +858,6 @@
     width: 90%; } }
 
 @media screen and (max-width: 500px) {
-  /* home */
-  .contenedor {
-    /* service */
-    /* nuestra clinica */
-    /* contacto */ }
     .contenedor footer .copyR {
       font-size: 10px; }
     .contenedor #pag__servicios .cajas {
@@ -867,8 +873,6 @@
       height: auto; } }
 
 @media screen and (max-width: 380px) {
-  .contenedor {
-    /* home */ }
     .contenedor header nav .logo {
       padding: 20px; }
       .contenedor header nav .logo img {
